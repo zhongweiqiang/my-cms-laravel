@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::post('v1/auth/login', 'Api\AuthController@login')->name('auth.login');
 Route::get('v1/auth/refresh', 'Api\AuthController@refresh')->name('auth.refresh');
 
-Route::namespace('Api')->prefix('v1')->middleware(['refresh'])->group(function (){
+Route::namespace('Api')->prefix('v1')->middleware(['refresh', 'permission'])->group(function (){
 
     Route::prefix('auth')->group(function(){
         Route::get('me', 'AuthController@me')->name('auth.me');
