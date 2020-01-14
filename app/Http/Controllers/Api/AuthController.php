@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
@@ -23,8 +24,13 @@ class AuthController extends Controller
     {
         # 1. 首先判断验证码是否正确正确
 
-        # 2. 验证账户
+//        # 2. 验证账户
+//        $data = ['name'=>'admin', 'password'=>'123456', 'status'=>1, 'role_id'=>1];
+//        User::create($data);
+//        return
         $credentials = request(['name', 'password']);
+
+
 
 
         if (! $token = auth('api')->attempt($credentials)) {

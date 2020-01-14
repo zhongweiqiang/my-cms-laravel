@@ -1,0 +1,6 @@
+2020/01/15 05:34:49 [error] 11805#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/usr/local/nginx/html/my-cms-laravel/public/../vendor/autoload.php): failed to open stream: No such file or directory in /usr/local/nginx/html/my-cms-laravel/public/index.php on line 24
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /usr/local/nginx/html/my-cms-laravel/public/index.php:0
+PHP message: PHP Fatal error:  require(): Failed opening required '/usr/local/nginx/html/my-cms-laravel/public/../vendor/autoload.php' (include_path='.:/usr/local/php7.2/lib/php') in /usr/local/nginx/html/my-cms-laravel/public/index.php on line 24
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /usr/local/nginx/html/my-cms-laravel/public/index.php:0" while reading response header from upstream, client: 127.0.0.1, server: www.cms.com, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "www.cms.com"
